@@ -1,0 +1,16 @@
+OOP
+	- Encapsulation
+	- Inheritance
+	- Polymorphism
+Java
+	- Collection Framework & Arrays
+	- Generics
+	- Everything Else
+Also
+	- Interfaces
+	- Abstract Classes
+
+Design Patterns
+	- MVC
+	- MVP
+	- MVVM
