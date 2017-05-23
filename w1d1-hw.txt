@@ -1,16 +1,41 @@
 OOP
-	- Encapsulation
-	- Inheritance
-	- Polymorphism
+
+Encapsulation:
+When you want to keep the variables private and only make them accessible through methods. An example is using getters and setters.
+
+Inheritance:
+When one class receives the properties (methods, references) of another. Uses the "extends" keyword to inherit from a parent class. The child class must use the "super" keyword to call from the parent.
+
+Polymorphism:
+When an object takes on many forms. Usually when a parent class reference is used for a child class object. Every object is an at least extends an object regardless. 
+
 Java
-	- Collection Framework & Arrays
-	- Generics
-	- Everything Else
+
+Collection Framework:
+Framework meant to be high performance and efficient, has a unified architecture. Different types of collections that work in a similar manner with high interoperability. Sets, Lists, Maps are examples.
+
+Arrays:
+An data structure that holds a fixed number of objects. Usually a collection of variables of the same type. You must declare the size of the array upon instantiation and it cannot be changed.
+
+Generics:
+Using a single method declaration, can get a set of related methods or types. Generic methods can be based in by any type and the method will handle it accordingly. 
+
+Everything Else:
+
 Also
-	- Interfaces
-	- Abstract Classes
+
+Interfaces: A reference class with a collection of abstract methods that cannot be insantiated. The child classes can use the interfaces as they like. You can implement multiple interfaces.
+
+Abstract Classes: Similar to an interface except it's used if the child classes are using it the same way, the methods and references. You can only extend one abstractions.
 
 Design Patterns
-	- MVC
-	- MVP
-	- MVVM
+
+MVC:
+Model-View-Controller - The model is used to store the data, the view hosts all the UI calls needed for the application, and uses the event notification from the model, the controller is like the view's assistant, all events originated from the view are handled in the controller, the controller also informs the model on behalf of the view.
+
+MVP:
+Model-View-Presenter - The model is used to store the data, the view is what displays the data and unlike the MVC the view is considered to be passive and the presenter does the decoupling of the view and data and handles all the business logic.
+Used more to improve the seperation of concerns and to help test automated units unlike MVC.
+
+MVVM:
+Model-View-Viewmodel - The model is used to store the data, the view is what is used to display the data on the UI, the viewmodel uses a binder to communicate with the view, it can trigger events in the view itself and manipulates the model as a result of the view. XAML is commonly used as a binder for this pattern.
