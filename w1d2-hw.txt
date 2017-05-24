@@ -1,0 +1,34 @@
+What is Android?
+Linux based platform used to for touchscreen mobile devices, primarly phones developed by Google and the Open Handset Alliance. 
+It was created in 2003 and then Google bought it in 2005. It uses sugary treats to name it's operating versions. 
+		
+How do you track memory leaks?
+Use the ADM (Android Device Manager) to monitor the app's memory usage, inspect the threats that are currently running and see the view hierarchy.		
+You'll want to use the Heap monitoring tool, click the "Update Heap" button to start the tracking. You can see the heap size, allocated size and the free memory and check to see if it gets too big.
+
+What are the ways you use to debug a program?
+You can use the logging system or sopl (System.out.println) commands within the program to obtain information about the program. You can also use the debugging tool by setting breakpoints within the program. You find the debugging tool by selecting Debug in the toolbar. 
+First select the device you want to debug on. The debuggable build variable needs to be set to true. You change the build variant by selecting Build and Select Build Variant in the menu bar. If the app depends on a library module make sure the library has a debuggable build variant published.
+When selecting Debug, the Studio builds an APK which is marked with a debug key, installs it on the device and opens the window for debugging.
+If it's an already running device, click Attach debugger to Android process, then select the process you want to debug by selecting Choose Process, then a debugging window will open. 
+		
+What is Android's architecture?
+It's stack is build of four layers, but five sections.
+1. Linux Kernel: Bottom layer that provides abstraction between the device hardware such as camera, keypad, display and so on. Handles networking and device drivers.
+2. Libraries: Some of the libraries include Web browser engine Webkit, libc, SQLite database which is a repository for storing and sharing data, libraries to play and record audio and video, SSL libraries for internet security and so on.
+   There are some Android specific libraries in the application framework libraries that include user interface building, graphics drawing and database access.
+   Android Runtime: This is the Java Virtual Machine specifically designed and optimized for Android, the VM uses Linux core features like memory management and multi-threading. It allows every Android application to run it's own process with it's own instance of the VM.
+   Provides a set of core libraries to allow Android developers to write applications usings Java.
+3. Application Framework: Higher-level services in the form of Java classes and these services can be used in the application, they include Activity Manager - controls aspects of the application lifecycle and activity stack, Content Providers - used to publish and share data with other apps, Resource Manager - provides access to non-code embedded resources, Notifications Manager - displays alerts and notifications to user and View System - set of views used to create the interface.
+4. Application: Top layer. Write to the application to be installed on this layer only. An application can be anything like Contacts, Maps, Browsers, Games and so on.
+
+What is the difference between Dalvik and ART?
+Dalvik uses a JIT (Just-In-Time) approach which means lower storage space consumption but longer load times while ART uses a AOT (Ahead-Of-Time) approach which compiles the app once installed results in faster load times and lower processor usage.
+The cache in Dalvik is built over time (faster boot times) but with ART the cache is built at first boat (longer boot times)
+Dalvik works better for lower internal storage devices with less space occupied while ART consumes more internal storage space since it's stored in apps in addition to APKs
+Dalvik is also stable and time tested and usually the VM of choice for devs while ART is still highly experimental and new so there is not a lot of support.
+Dalvik was deprecated at Lollipop, ART is now used.
+
+What are 9-patch images?
+Stretchable, repeatable images reduced to their smallest size. Can be sliced up into 9 squares. The four corners would be static while the others could be stretched or repeated. 
+It adds a 1 point border to the image as an index to determine which image is which. 
