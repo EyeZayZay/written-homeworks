@@ -32,3 +32,15 @@ Dalvik was deprecated at Lollipop, ART is now used.
 What are 9-patch images?
 Stretchable, repeatable images reduced to their smallest size. Can be sliced up into 9 squares. The four corners would be static while the others could be stretched or repeated. 
 It adds a 1 point border to the image as an index to determine which image is which. 
+
+How do you support phones and tablets?
+Your screen's UI will resize based on the resolution of the phone or tablet. Make it flexible and optimize it for different types of devices by providing alternate resources.
+Most importantly optimize the user experience based on what device the user has. For example, you can fit more information on a tablet screen than you can on a phone screen.
+Android has Fragment APIs to desperate the distinct behavorial components into seperate pieces on the UI/screen.
+As well as ActionBar which has a dedicated UI at the top of the screen to give user actions and navigation and identify the app.
+
+How do you support multiple languages?
+It uses the system locale setting to determine which language to provide for the user.
+You can provide resources specififc to a type of culture/language of people not available to others.
+To add this support you create an additional directory inside the /res with the following format
+<resource type>-b+<language code>[+<country code>]
