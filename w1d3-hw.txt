@@ -9,10 +9,10 @@ What is the Android lifecycle?
 As the user navigates through the app the activity instances transition through different states in the lifecycle. The activity provides numerous callbacks that allow the activity to know what state has changed: as above whether it's creating, stopping, resuming, or destroying the process that the activity resides among others.
 
 If I'm in Activity A and I enter Activity B, what are the callbacks triggered?
-onPause and onStop.
+onPause, onCreate, onStart, onResume and onStop.
 
 If I'm in Activity A, then I enter Activity B and then press the back button, what are the callbacks triggered?
-onStart and onResume.
+onPause, onRestart, onStart, onResume, onStop, onDestroy.
 
 How can I send information from an Activity to another Activity?
 Using Intents and the putExtra/getExtra methods. You get a bundle in the second activity and grab data from that.
