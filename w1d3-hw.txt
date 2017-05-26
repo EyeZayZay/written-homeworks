@@ -1,0 +1,38 @@
+What is an Activity?
+It's a single screen with a user interface and initiates an onCreate callback method. It also has a series of other callback methods that are commonly used like onStart, onResume, onPause, onStop, onDestroy, and onRestart.
+
+How can I manage rotation changes?
+They can be done declaratively with layouts by including files in folders that follow naming conventions, it will automatically load the right files when the orientation changes. This includes Layout Resources: specifying which layout files are inflated for each orientation and Drawable Resources: which specificies the drawables for each orientation.
+Additionally it can be done programmatically for technical limitations, developer preferences and so forth. When doing it programmatically, an application must manually account for device orientation which is handled automatically using XML resources.
+
+What is the Android lifecycle?
+As the user navigates through the app the activity instances transition through different states in the lifecycle. The activity provides numerous callbacks that allow the activity to know what state has changed: as above whether it's creating, stopping, resuming, or destroying the process that the activity resides among others.
+
+If I'm in Activity A and I enter Activity B, what are the callbacks triggered?
+onPause and onStop.
+
+If I'm in Activity A, then I enter Activity B and then press the back button, what are the callbacks triggered?
+onStart and onResume.
+
+How can I send information from an Activity to another Activity?
+Using Intents and the putExtra/getExtra methods. You get a bundle in the second activity and grab data from that.
+
+What is the difference between an Activity and a Fragment?
+Activiity if you want to replace the entire screen, fragment if it's just a portion of it.
+Activities are the top-level application components that manage a hierarchy of views, there must be one activity active at any given time.
+Fragments rather are view containers that contain a hierarchy of views, fragments must be inserted into a view hierarchy with an activity as it's root. There can be zero fragments.
+
+When is the onDestroy method called?
+Only happens when you completely close/terminate out the application.
+
+How can you guarantee backwards compatibility in Android?
+Set the minimum API to something and it'll only go back that far or the features won't work.
+
+What are the lifecycle callbacks that are guaranteed to happen in an Activity?
+onCreate, onStart, onResume.
+
+Can I destroy an Activity?
+Yes. The finish method automatically sends it to the onDestroy method.
+
+I want to get information back from an Activity, how can I do that?
+Using an Intent, use getExtras that contains a bundle that uses the extra's data from that activity.

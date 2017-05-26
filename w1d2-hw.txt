@@ -3,8 +3,9 @@ Linux based platform used to for touchscreen mobile devices, primarly phones dev
 It was created in 2003 and then Google bought it in 2005. It uses sugary treats to name it's operating versions. 
 		
 How do you track memory leaks?
-Use the ADM (Android Device Manager) to monitor the app's memory usage, inspect the threats that are currently running and see the view hierarchy.		
-You'll want to use the Heap monitoring tool, click the "Update Heap" button to start the tracking. You can see the heap size, allocated size and the free memory and check to see if it gets too big.
+Use the ADM (Android Device Manager) to monitor the app's memory usage, inspect the threads that are currently running and see the view hierarchy.		
+You'll want to use the Heap monitoring tool, click the "Update Heap" button to start the tracking. You can see the heap size, allocated size and the free memory and check to see if the allocated size gets too big for the heap and free memory.
+You can use the Monitor at the bottom of the screen to track the allocated vs free memory.
 
 What are the ways you use to debug a program?
 You can use the logging system or sopl (System.out.println) commands within the program to obtain information about the program. You can also use the debugging tool by setting breakpoints within the program. You find the debugging tool by selecting Debug in the toolbar. 
@@ -41,6 +42,6 @@ As well as ActionBar which has a dedicated UI at the top of the screen to give u
 
 How do you support multiple languages?
 It uses the system locale setting to determine which language to provide for the user.
-You can provide resources specififc to a type of culture/language of people not available to others.
+You can provide resources specific to a type of culture/language of people not available to others.
 To add this support you create an additional directory inside the /res with the following format
 <resource type>-b+<language code>[+<country code>]
