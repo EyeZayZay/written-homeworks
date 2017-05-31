@@ -1,3 +1,6 @@
+GITFLOW - derived from Vincent Driessen at nvie. A strict branching model designed around the project release. It's a robust framework for larger projects. It assigns specific roles to different branches and defines how and when they should interact. It uses individual branching for preparing, maintaining and recording releases. Plus pull requests, isolated experiments and more efficient collaboration.
+It uses a central repository as the communication hub for all developers.
+
 VOLATILE KEYWORD -
 Indicates a field that might be modified by multiple threads that are executing at the same time. The most up to date value is present at all times. Lock isn't used to serialize access.
 
