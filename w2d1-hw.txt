@@ -1,0 +1,28 @@
+VOLATILE KEYWORD -
+Indicates a field that might be modified by multiple threads that are executing at the same time. The most up to date value is present at all times. Lock isn't used to serialize access.
+
+SYNCHRONIZED KEYWORD -
+Protects by only letting one thread at a time in a particular section of code, thus protecting it. Like data or variables being corrupted by simultaneous modifications from different threads.
+
+TRANSIENT KEYWORD -
+Used to indicate that a variable should not be serialized. If a variable is considered transient it will not be persisted. Serialization converts the object state to serial bytes, those bytes are sent over the network and the object is recreated from those bytes.
+
+MAPS -
+An interface that maps keys to values; the keys are unique, so no duplicates are allowed. They can be viewed as a set of keys, collection of values or a set of key-value mappings. The order is defined as the order in which the elements are returned during iteration. There are HashMaps, HashTables and TreeMaps which each have different functionality which can be synchronized or not.
+
+LIST -
+A collection that stores a sequence of elements. Elements can be inserted or accessed by their position in the list of a zero based index, a list may contain duplicate elements. A couple examples are ArrayLists and LinkedLists that have different functionality.
+
+SET -
+A collection that can contain no duplicate elements and models the mathematical set abstraction. Some examples are HashSet, TreeSet and SortedSet. It has a stronger contract on behavior of the equals and hashCode operations, allowing them to be compared meaningfully even if their implementation types are different.
+
+MAPS VS LIST VS SET -
+When it comes to duplicates, a list can have duplicates, a set cannot have duplicates and a map can't have duplicate keys but can have duplicate values. List maintains order, set maintains no order besides LinkedHashSet. Set Map doesn't store in any order but a few of it's classes do. A map has a key and value pair while the other two are just singular relations.
+
+ARRAYLIST VS LINKEDLIST -
+ArrayList has O(1) search speed while a LinkedList has O(N). Array uses an index while you must traverse sequentially through a LinkedList. On the otherhand, LinkedList has O(1) removal while Array has (N). ArrayLists need to be shifted to remove a value while LinkedLists has two pointers to help with that. It's the same with insertion for both. Due to ArrayLists having index and LinkedList having two pointers, LinkedLists use more memory. 
+
+CONCURRENT PACKAGE (CONCURRENT HASHMAP, ATOMIC VARIABLES) -
+A set of classes that make it easier to develop concurrent (multithreaded) applications. 
+ConcurrentHashMap allows concurrent modifications of the map from several threads without being blocked.
+Atomic variables are a generalization of volatile variables, they have atomic conditional compare-and-set updates.
