@@ -1,0 +1,60 @@
+Based on today’s interview introduction session please answer the three questions below. 
+• Describe MAC’s client/vendor model?
+Consultants connected to the Vendor Company which is connected to the Client company.
+
+• What are the 3 types of interview mediums?
+Phone Interview, In-Person Interview, Skype Interview.
+
+• Why is it important to provide specific details when responding to an interviewer?
+So they can better understand the context of the situation, see how it was handled it and how that behavior might be beneficial to their company. Additionally they want to see how well you can articulate situations and communicate in general.
+ 
+2. Using the STAR Method and the guidelines below please respond to the two behavioral/ situational questions below:
+
+Response guidelines: 
+•Situation/ Task 
+•Action 
+•Result 
+
+ 
+• Describe a time when you had to accomplish a great deal of work in a short period of time?
+Situation: One time I had to finish writing automation scripts for our developer workstations at Boeing within a week.
+Action: I removed distractions, prevented multitasking and had coworkers available for tough questions so I went ahead and started working on the task despite believing it would take about a month to complete. I explored all of my available resources, took limited breaks and put in extra hours.
+Result: I found a quicker solution involving WebSphere scriping after searching the web and talking with a coworker. I completed the task with a day to spare. The solution allowed the company to take the setup of a developer workstation from 8 hours to 30 minutes.
+
+• Tell me about a time you failed to meet a deadline? How did you handle it and what did you learn?
+Situation: I had an assignment (at Mobile Apps Company?) that was due the next day which was projected to take about three hours.
+Action: I attempted the homework and eight hours later I was not done, I was completely exhausted and none of my other classmates were able to figure it out either. I called it a night and hoped he would understand or I could get it done in the morning.
+Result: I had a fresh brain the next morning and managed to use the hour before work to complete the assignment and turn it in. It was due at midnight from the night before but the instructor was forgiving because he understood the complexity of the assignment and never expected us to even get that far. I learned to never underestimate the time it takes to complete an assignment and to sometimes take a break because you may find a better solution with a fresh brain.
+ 
+3. Please provide detailed responses to the seven technical questions below.
+
+Use Case and Anecdotal Questions:
+• Which specific design pattern did you implement (MVC, MVVM, MVP, Singleton) and why did you chose that design pattern over others?
+While working at Boeing, I had to design a new client for our platform of applications. Due to the large amounts of data, I wanted to keep everything seperate. I decided to go with the MVC because the connection between the view and the rest was not always available. For example I used a web API and it was seperate from the client browsers. It also works well for large teams of developers and we needed control over the application so it was beneficial to use it. These are things that the other models don't do as strong.
+ 
+
+Technical- Rapid Fire Questions: 
+• What technologies do you use for push notifications?
+Firebae Cloud Messaging, Azure Notification Hubs.
+
+• What technologies do you use for analytics?
+The Monitor, logging and resources from the JDK.
+
+• What is the lifecycle of an activity?
+It is the phases an Android application goes through. In this order: onCreate, onStart, onPause, onResume, onStop, onDestroy and onRestart.
+
+Technical-Scenario Question:
+• When would the lifecycle of an activity not start with onCreate?
+If an activity was previously paused or stopped, it'll start with on resume instead.
+Only fresh opens to activities call the onCreate.
+ 
+Bonus Technical Questions:
+• What is the difference between MVC, MVVM, MVP, and Singleton? 
+MVC is the Model-View-Controller design
+MVVM is the Model-View-Viewmodel design
+MVP is the Model-View-Presenter design
+MVC is used in situations where the connection between the view and the rest of the program is not always available, MVP is used where binding via a datacontext is not possible, MVVM is used in situations where binding via a datacontext is possible. it has various IView interfaces for each view are removed which means less code to maintain. and Singleton is used when you just one instance of a particular object is needed.
+
+• What is OAuth?
+An open standard access delegation, commonly used as a way for Internet users to grand websites or apps permission to their information on other websites without giving out passwords. 
+ 

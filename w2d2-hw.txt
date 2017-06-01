@@ -1,0 +1,37 @@
+Creational -
+Abstract Factory: Provides a way to encapsulate a group of individual factories to have a common theme without specifying their concrete classes. It's a super factory that creates other factories. You can do it for an address book: ConcreteFactory and ConcreteProduct - you can use USAddressFactory with USAddress and USPhoneNumber classes and for each country that needs to be added include the same classes for those.
+
+Factory: The most used design pattern. Creates objects without exposing the instantiation logic to client and refers to the newly created object through a common interface. You can make a dog factory that has different types of dogs (dog classes).
+
+Singleton: When you only want one instance of a object. Provides a global point of access to the object. This is used for Logger classes because you will only want one instance of a logger per application.
+
+Builder: Defines an instance for creating an object by letting subclasses decide which class to instantiate and refers to the newly created object through a common interface. You can make a VehicleBuilder that uses same parts to creates different sets of rules for each type of vehicle. ConcreteBuilders are attached to each of the objects being constructed, The Product is the vehicle and the Director is the manufacturer and its shop.
+
+Prototype: Defines creating object while keeping performance in mind. This pattern involves implementing a prototype interface which tells to create a clone of the current object. Useful when the creation of the object directly is costly. It's a template of any object before the actual object is constructed. Useful for a Movie, Album and Show class with cloning methods when you have multiples of each while they could be costly.
+
+Structural -
+Adapter: Convert the interface of a class into another interface clients expect and lets classes work together, that could not otherwise because of incompatible interfaces. Wrapper classes used to adopt third party libraries and frameworks.
+
+Bridge: Decouples abstraction from implementation so that the two can vary independently. Used when the need to avoid permanent binding between an abstraction and implementation and when the abstraction and implementation need to vary independently. This leaves the client code unchanged with no need to recompile the code. RemoteControl application with different TV types. You don't want the remote and TV to bind and they need to be independent. 
+
+Composite: Composes objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly. An example is a menu hierarchy that contains options with submenus.
+
+Decorator: Used to add additional responsibilities dynamically to an object. Does it by inheriting at runtime. Using a PictureFrame object and later inserting a Picture at runtime.
+
+Facade: Aims to make things look cleaner and more appealing. A simple relationship way to realize relationships between entities. Facade defines a higher-level interface that makes the subsystem easier to use. Operating systems are one such example - you don't see all the inner workings of your computer, but the OS provides a simplified interface to use the machine. 
+
+Flyweight: Used to share a large amount of objects that have part of their internal state in common where the other part of state can vay, in an efficient way. An example is a word processor handling the numerous characters being used in the application.
+
+Proxy: Effective pattern at helping with the control the use and access of resources. It's a placeholder for an object to control references to it. A check or credit card can be a proxy for what is in a bank account. It can be used in place of cash but provides the means of accessing that cash when required. They are protecting the account.
+
+Template Method:
+
+Mediator Pattern
+Chain of Responsibility Pattern
+Observer Pattern
+Strategy Pattern
+Command Pattern
+State Pattern
+Visitor Pattern
+Iterator Pattern
+Memento Pattern
