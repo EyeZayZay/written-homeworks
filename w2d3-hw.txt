@@ -2,13 +2,14 @@ Research what is a service?
 A component which runs in the background without direct interaction with the user. It has no user interface so it's not bound to the lifecycle of an activity. They run with a higher priority than inactive or invisible activities, therefore it's less likely for them to be terminated. They can be configured to restart if they get terminated for when the application has the resources to run it again.
 
 The types of services in Android? 
-Unbound services which run in the background indefinitely, even if the activity ends. And bound services which is a kind of service which runs till the lifespan of the activity is out.
+Scheduled: You can use the JobScheduler API by registering jobs and specifying their requirements for network and timing.
+Started: After it's started, a service can run in the background indefinitely, even if the component that started it is destroyed. Usually, a started service performs a single operation and does not return a result to the caller.
+Bound: Below.
 
 What is an Intent Service? 
-A simple type of service that can be used to handle asynchronous work off the main thread by the way of Intent requests. Each intent is added to the IntentService's queue and handled sequentially.
+A simple type of service that can be used to handle asynchronous work off the main thread by the way of Intent requests. Each intent is added to the IntentService's queue and handled sequentially. Intent Services are one of the simplest ways to offload chunks of processing off the UI thread of your application and into a remote work queue. You define your own service, package  with an intent with appropriate data you want to send for processing and start the intent service. You can send data back to the application by simplying returning the result as an intent object using a broadcast receiver.
 
 Service vs Intent Service? 
-Intent Services are one of the simplest ways to offload chunks of processing off the UI thread of your application and into a remote work queue. You define your own service, package  with an intent with appropriate data you want to send for processing and start the intent service. You can send data back to the applicatoin by simplying returning the result as an intent object using a broadcast receiver.
 Services can be used in tasks with no UI and shouldn't be too long, in order for them to be long you must use threads within it. 
 IntentService runs on a seperate worker thread, and Service runs in the background but on the Main Thread of the application.
 IntentService runs tasks in parallel while a Service could block the Main Thread of the application.

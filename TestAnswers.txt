@@ -1,0 +1,32 @@
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+10.
+public int sum(num1, num2) {
+	return num1 + num2;
+}
+
+11.
+Main Activity:
+  	Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+  	myIntent.putExtra("input", retrieveText());
+  	startActivity(myIntent);
+Second Activity:
+	Intent intent = getIntent();
+        Bundle b = intent.getExtras();
+
+12.
+public class SingleObject {
+   private static SingleObject instance = new SingleObject();
+   private SingleObject(){}
+   public static SingleObject getInstance(){
+      return instance;
+   }
+}
