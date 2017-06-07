@@ -1,0 +1,5 @@
+ListView:
+A view group that displays a list of scrollable items. The list items are automatically inserted into the list using an Adapter that pulls content from a source such as an array or database query and converts each item result into a view that's placed into the list. You can use a CursorLoader as a standard way to query a Cursor as an asynchronous task in order to avoid blocking your app's main thread with the query.
+
+RecyclerView:
+It's more flexible than ListView. It's a container for displaying large data sets that can be scrolled very efficiently by maintainng a limited number of views. Use it when you haev data collections whose elements change at runtime based on user action or network events. Provides layout managers for positioning items, default animations for common item operations, such as removal or addition of items. To use it, you specify an adapter and layout manager. A layout manager positions item views inside a RecyclerView and determines when to use item views that are no longer visible to the user. To reuse a view, a layout manager may ask the adapter to replace the contents of the view with a different element of dataset.
